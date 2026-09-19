@@ -2,23 +2,22 @@
 NetworkWalks Week 2 cybersecurity lab covering footprinting with theHarvester and authorized network scanning with Zenmap.
 
 
+<img width="738" height="1600" alt="1" src="https://github.com/user-attachments/assets/231ea1c4-9a0e-4075-b7c4-587089509c16" />
 
 
-
-Field	Details
-
-Pentester Name	Rutuja Medhekar
-Batch	B083
-Program	NetworkWalks Cybersecurity Internship
-Week	Week 2
-Modules	W2-PM4 & W2-PM5
-Project	Footprinting & Network Scanning
-Tools	theHarvester & Zenmap
-Operating Systems	Kali Linux & Windows
-Skills	Reconnaissance & Network Mapping
-Purpose	Educational Cybersecurity Lab
-Environment	Authorized Lab / Own Network
-GitHub	Rutuja Medhekar
+| Field | Details |
+|---|---|
+| Pentester Name | Rutuja Medhekar |
+| Batch | B083 | NetworkWalks Cybersecurity Internship |
+| Date | 16 September 2026 |
+| Modules Completed | W2-PM4: theHarvester-based Footprinting
+W2-PM5: Network Scanning with Zenmap |
+| Client / Target | 1. networkwalks.com (written permission secured)
+2. My own local VirtualBox host-only LAN |
+| Permission Secured | ✅ Yes |
+| Phases Covered | Phase 1: Footprinting & Reconnaissance with theHARVESTER
+Phase 2: Network Scanning with Zenmap
+Phase 3–5: In Progress |
 
 
 
@@ -80,7 +79,10 @@ The project provides hands-on experience with reconnaissance, OSINT collection, 
 
         cat task1.txt
 
-  * **Analysis & Objective:**
+<img width="1280" height="617" alt="2" src="https://github.com/user-attachments/assets/b6fd0b8f-2404-4e8b-8084-8d2440d25c0c" />
+
+
+* **Analysis & Objective:**
     * **What we are trying to prove:** Assesses how much organization-specific infrastructure is publicly discoverable via an eastern search engine module (`baidu`) without interacting directly with the target network.
     * **What is shown:** The output displays raw OSINT data harvested from Baidu, including discovered subdomains and associated IP addresses tied to `microsoft.com`.
 
@@ -94,15 +96,27 @@ The project provides hands-on experience with reconnaissance, OSINT collection, 
 
         cat task2.txt
 
+    <img width="1280" height="656" alt="4" src="https://github.com/user-attachments/assets/ffc27088-7ff2-4511-b511-678798fca7a2" />
+    
+
+
   * **Analysis & Objective:**
     * **What we are trying to prove:** Demonstrates the capabilities and limitations of automated multi-source enumeration (`all`), showing how the tool attempts to aggregate intelligence across a wide spectrum of public and proprietary OSINT feeds simultaneously.
     * **What is shown:** The output displays harvested asset data alongside warning messages for services that require API credentials. This demonstrates the limitations of restricted or registration-bound OSINT sources when API credentials are not configured.
 
 ### Phase 2: Network Scanning with Zenmap
 
-* Opened Windows Command Prompt and executed `ipconfig` to determine the local interface configuration, including the active IPv4 address, subnet mask, and default gateway.
+* Opened Windows Command Prompt and executed ipconfig to determine local interface configurations under the Wireless LAN adapter Wi-Fi ( IPv4 Address: 10.138.53.49 , Subnet Mask: 255.255.255.0 , Default Gateway: 10.138.53.36 ).
 
-* Entered the **actual authorized local subnet range obtained from `ipconfig`** into Zenmap, selected the **Ping scan** profile, and executed the corresponding Nmap command.
+* <img width="1280" height="656" alt="4" src="https://github.com/user-attachments/assets/5cda6b5d-b3bd-4c13-b315-ec0576a10946" />
+
+
+*• Entered the local subnet range ( 10.138.53.0/24 ) into Zenmap, selected the Ping scan profile, and executed the underlying command:
+nmap -sn 10.138.53.0/24
+
+<img width="1600" height="856" alt="00" src="https://github.com/user-attachments/assets/3e68e23c-5733-46d8-b7b3-de3ea28a4018" />
+
+
 
 * **Zenmap Host Discovery Results:**
   * Executed the ping sweep against the authorized local subnet.
@@ -114,69 +128,18 @@ The project provides hands-on experience with reconnaissance, OSINT collection, 
   * Reviewed the topology generated from the authorized local network scan.
   * Captured the topology as evidence for the project documentation.
  
+<img width="1600" height="856" alt="6" src="https://github.com/user-attachments/assets/ac26a7c5-d748-464d-bda3-7ec98cf828f6" />
+
+
+📋 Lab Assessment & Execution
+
+Successfully completed and verified the Zenmap Network Scanning practice lab assessment, demonstrating practical proficiency in mapping network topologies and analyzing scan results.
+
+<img width="990" height="465" alt="8" src="https://github.com/user-attachments/assets/8e201a74-8f2c-4e0e-989a-acea7921b88b" />
 
 
 
-
-
- 
- ⚙️ 4. Methodology & Execution
-
-### Phase 1: Footprinting & Reconnaissance with theHARVESTER
-
-* **Help & Usage Verification:** Inspected tool parameters and guidelines using command-line options (`theHarvester -h`) to understand syntax flags like domain selection (`-d`), result limits (`-l`), and data sources (`-b`).
-
-* **Task 1 (Baidu Source Query):** Executed targeted search against `microsoft.com` using the Baidu module with a result limit of 1000 and saving the text file as evidence using `cat task1.txt`:
-
-  * **Execution Command:**
-
-        theHarvester -d microsoft.com -l 1000 -b baidu
-
-  * **Output Evidence:**
-
-        cat task1.txt
-
-  * **Analysis & Objective:**
-    * **What we are trying to prove:** Assesses how much organization-specific infrastructure is publicly discoverable via an eastern search engine module (`baidu`) without interacting directly with the target network.
-    * **What is shown:** The output displays raw OSINT data harvested from Baidu, including discovered subdomains and associated IP addresses tied to `microsoft.com`.
-
-* **Task 2 (Multi-Source Enumeration):** Executed broader searches against `microsoft.com` using all available sources (`all`) with a result limit of 50 and saving the text file as evidence using `cat task2.txt`:
-
-  * **Execution Command:**
-
-        theHarvester -d microsoft.com -l 50 -b all
-
-  * **Output Evidence:**
-
-        cat task2.txt
-
-  * **Analysis & Objective:**
-    * **What we are trying to prove:** Demonstrates the capabilities and limitations of automated multi-source enumeration (`all`), showing how the tool attempts to aggregate intelligence across a wide spectrum of public and proprietary OSINT feeds simultaneously.
-    * **What is shown:** The output displays harvested asset data alongside warning messages for services that require API credentials. This demonstrates the limitations of restricted or registration-bound OSINT sources when API credentials are not configured.
-
-### Phase 2: Network Scanning with Zenmap
-
-* Opened Windows Command Prompt and executed `ipconfig` to determine the local interface configuration, including the active IPv4 address, subnet mask, and default gateway.
-
-* Entered the **actual authorized local subnet range obtained from `ipconfig`** into Zenmap, selected the **Ping scan** profile, and executed the corresponding Nmap command.
-
-* **Zenmap Host Discovery Results:**
-  * Executed the ping sweep against the authorized local subnet.
-  * Identified active hosts within the scanned local network.
-  * Recorded the scan results for documentation.
-
-* **Network Topology Generation:**
-  * Switched to the **Topology** tab in Zenmap to visually map the discovered nodes.
-  * Reviewed the topology generated from the authorized local network scan.
-  * Captured the topology as evidence for the project documentation.
- 
-
-
-
-
-
-
- 🛡️ Consolidated Security Assessment & Risk Matrix
+🛡️ Consolidated Security Assessment & Risk Matrix
 
 The reconnaissance and network-scanning activities provided visibility into publicly available information and the authorized local network environment. The following risk matrix summarizes the security observations identified during the practical assessment.
 
