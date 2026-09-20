@@ -2,7 +2,8 @@
 NetworkWalks Week 2 cybersecurity lab covering footprinting with theHarvester and authorized network scanning with Zenmap.
 
 
-<img width="738" height="1600" alt="1" src="https://github.com/user-attachments/assets/231ea1c4-9a0e-4075-b7c4-587089509c16" />
+<img width="835" height="1280" alt="WhatsApp Image 2026-09-20 at 5 25 49 AM" src="https://github.com/user-attachments/assets/1db9e378-358d-4432-87c2-57d3229556cc" />
+
 
 
 | Field | Details |
@@ -230,10 +231,18 @@ All observations in this assessment are intended for educational purposes and sh
 
 
 
+👤 Author
+
+Rutuja Medhekar  
+BBA-CA Student | Aspiring Cyber Security Professional
+
+LinkedIn: https://lnkd.in/p/d_Mbb4Xi
 
 
 
+# 🗂️ Project Information
 
+Program Name: Cybersecurity at Networkwalks | Week: 02 | Project: Penetration Testing Report: Footprinting & Network Scanning (theHarvester & Zenmap) | Repository: GitHub
 
 
 
