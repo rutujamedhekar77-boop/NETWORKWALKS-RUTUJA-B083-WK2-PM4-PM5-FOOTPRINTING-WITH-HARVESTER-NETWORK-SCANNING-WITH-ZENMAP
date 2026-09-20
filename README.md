@@ -236,7 +236,7 @@ All observations in this assessment are intended for educational purposes and sh
 Rutuja Medhekar  
 BBA-CA Student | Aspiring Cyber Security Professional
 
-LinkedIn: https://lnkd.in/p/d_Mbb4Xi
+LinkedIn: [Rutuja Medhekar](https://lnkd.in/p/d_Mbb4X)
 
 
 
